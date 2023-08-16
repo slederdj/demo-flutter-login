@@ -49,7 +49,7 @@ class _MobileWelcomeScreen extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        SvgImageLoader(path: "assets/icons/chat.svg"),
+        SvgImageLoader(path: "assets/icons/chat.svg", text: "Welcome"),
         Row(
           children: const [
             Spacer(),

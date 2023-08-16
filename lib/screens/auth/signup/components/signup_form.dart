@@ -1,7 +1,8 @@
 import 'package:app_example/constants.dart';
 import 'package:app_example/screens/auth/login/login_screen.dart';
 import 'package:app_example/widgets/already_account.dart';
-import 'package:app_example/widgets/password_field.dart';
+import 'package:app_example/widgets/form_fields/email_field.dart';
+import 'package:app_example/widgets/form_fields/password_field.dart';
 import 'package:flutter/material.dart';
 
 class SignUpForm extends StatelessWidget {
@@ -14,19 +15,7 @@ class SignUpForm extends StatelessWidget {
     return Form(
       child: Column(
         children: [
-          TextFormField(
-            keyboardType: TextInputType.emailAddress,
-            textInputAction: TextInputAction.next,
-            cursorColor: kPrimaryColor,
-            onSaved: (email) {},
-            decoration: InputDecoration(
-              hintText: "Your email",
-              prefixIcon: Padding(
-                padding: const EdgeInsets.all(defaultPadding),
-                child: Icon(Icons.person),
-              ),
-            ),
-          ),
+          EmailField(),
           Padding(
             padding: const EdgeInsets.symmetric(vertical: defaultPadding),
             child: PasswordField()),

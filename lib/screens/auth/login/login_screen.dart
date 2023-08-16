@@ -16,7 +16,7 @@ class LoginScreen extends StatelessWidget {
           mobile: _MobileLoginScreen(),
           desktop: Row(
             children: [
-              Expanded(child: SvgImageLoader(path: "assets/icons/login.svg")),
+              Expanded(child: SvgImageLoader(path: "assets/icons/login.svg", text: "Login",)),
               Expanded(
                   child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -41,7 +41,7 @@ class _MobileLoginScreen extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        SvgImageLoader(path: "assets/icons/login.svg"),
+        SvgImageLoader(path: "assets/icons/login.svg", text: "Login"),
         Row(
           children: [Spacer(), Expanded(flex: 8, child: LoginForm()), Spacer()],
         )
