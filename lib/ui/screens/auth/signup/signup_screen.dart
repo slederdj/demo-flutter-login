@@ -1,7 +1,7 @@
-import 'package:app_example/screens/auth/signup/components/signup_form.dart';
-import 'package:app_example/widgets/backgroud.dart';
-import 'package:app_example/widgets/responsive.dart';
-import 'package:app_example/widgets/svg_image_loader.dart';
+import 'package:app_example/ui/screens/auth/signup/components/signup_form.dart';
+import 'package:app_example/ui/widgets/backgroud.dart';
+import 'package:app_example/ui/widgets/responsive.dart';
+import 'package:app_example/ui/widgets/svg_image_loader.dart';
 import 'package:flutter/material.dart';
 
 class SignupScreen extends StatelessWidget {
@@ -16,14 +16,11 @@ class SignupScreen extends StatelessWidget {
           desktop: Row(
             children: [
               Expanded(
-                child: SvgImageLoader(
-                  path: "assets/icons/signup.svg",
-                  text: "Sign Up",
-                ),
+                child: SvgImageLoader(path: "assets/icons/size-desktop.svg"),
               ),
               Expanded(
                   child: Row(
-                children: const [
+                children: [
                   Spacer(),
                   Expanded(
                     flex: 8,
@@ -46,16 +43,13 @@ class _MobileSignUpScreen extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        SvgImageLoader(
-          path: "assets/icons/signup.svg",
-          text: "Sign Up",
-        ),
+        SvgImageLoader(path: "assets/icons/size-mobile.svg"),
         Row(
-          children: const [
+          children: [
             Spacer(),
             Expanded(
               flex: 8,
-              child: SignUpForm(),              
+              child: SignUpForm(),
             ),
             Spacer()
           ],
