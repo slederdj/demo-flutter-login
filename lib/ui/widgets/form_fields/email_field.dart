@@ -18,7 +18,6 @@ class _EmailFieldState extends State<EmailField> {
 
   void _validateEmail(String value) {
     final errorText = validEmail(value);
-    print(errorText);
     setState(() {
       _emailErrorText = errorText;
     });
@@ -29,6 +28,7 @@ class _EmailFieldState extends State<EmailField> {
   Widget build(BuildContext context) {
     return TextFormField(
       keyboardType: TextInputType.emailAddress,
+      controller: widget.controller,
       textInputAction: TextInputAction.next,
       cursorColor: kPrimaryColor,
       onChanged: _validateEmail,

@@ -9,6 +9,6 @@ const int maxWidthMobile = 576;
 const int minWidthDesktop = 992;
 
 class ApiConstants {
-  static String baseUrl = 'http://localhost:3003';
+  static String baseUrl = 'http://146.190.37.178:3003';
   static String usersEndpoint = '/user';
 }
